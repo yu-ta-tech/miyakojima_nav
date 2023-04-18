@@ -1,15 +1,17 @@
 import Layout from "../components/Layout";
-import Location from "../components/Location"
-import styles from "../styles/Map.module.css";
+import Location from "../components/Location";
 import { getAllLocationsData } from "../lib/location";
 
-const Map = ({locations}) => {
+const Map = ({ locations }) => {
   return (
     <Layout title="見どころ一覧">
-      <h1 className={styles.title}>見どころ一覧</h1>
-      <ul>
-        {locations && locations.map((location) => <Location key={location.id} location={location} />)}
-      </ul>
+      <h1>見どころ一覧</h1>
+      <div>
+        {locations &&
+          locations.map((location) => (
+            <Location key={location.id} location={location} />
+          ))}
+      </div>
     </Layout>
   );
 };
