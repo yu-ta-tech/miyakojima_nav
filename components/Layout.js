@@ -4,13 +4,13 @@ import Image from "next/image";
 
 export default function Layout({ children, title = "みやこナビ" }) {
   return (
-    <div className="flex flex-col justify-center items-center text-gray-600 text-sm font-mono">
+    <div className="flex flex-col justify-center items-center text-gray-600 text-sm font-mono min-h-screen">
       <Head>
         <title>{title}</title>
       </Head>
       <header className="sticky top-0">
         <nav className="h-14 bg-gray-800 w-screen">
-          <div className="float-left text-xl text-gray-300 pl-32 mt-3">
+          <div className="float-left text-xl text-gray-300 pl-40 mt-3">
             <a href="#">みやこナビ</a>
           </div>
           <div className="float-right pr-32  mt-3">
@@ -34,10 +34,10 @@ export default function Layout({ children, title = "みやこナビ" }) {
           </div>
         </nav>
       </header>
-      <main className="flex flex-1 justify-center items-center flex-col  w-screen">
+      <main className="flex flex-1 justify-center items-center flex-col w-screen">
         {children}
       </main>
-      <footer>
+      <footer className="w-full h-12 flex justify-center items-center border-t mt-auto">
         <div>&copy; みやこナビ</div>
       </footer>
     </div>
