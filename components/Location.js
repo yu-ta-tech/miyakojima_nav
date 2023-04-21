@@ -6,11 +6,7 @@ const Location = ({ location }) => {
       <span>{location.id}</span>
       {" : "}
       <Link href={`/locations/${location.id}`}>
-        <div>
-          <div>
-            <span>{location.title}</span>
-          </div>
-        </div>
+        <span>{location.title}</span>
       </Link>
     </div>
   );
