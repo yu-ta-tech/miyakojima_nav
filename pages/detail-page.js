@@ -1,7 +1,10 @@
+import { useRouter } from "next/router";
 import Layout from "../components/Layout";
 import { places } from "../lib/seeds/seedHelpers";
 
 const Detail = () => {
+  const router = useRouter();
+  const { id } = router.query;
   return (
     <Layout title="見どころ一覧">
       <h1>詳細ページ</h1>

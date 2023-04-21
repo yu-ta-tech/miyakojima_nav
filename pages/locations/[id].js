@@ -15,7 +15,7 @@ export default function Location({ location }) {
       </p>
       <p>{location.title}</p>
       <p>{location.body}</p>
-      <Link href="/map-page">
+      <Link href="/spot-page">
         <div>
           <svg
             fill="none"
@@ -31,7 +31,7 @@ export default function Location({ location }) {
               d="M18.75 19.5l-7.5-7.5 7.5-7.5m-6 15L5.25 12l7.5-7.5"
             ></path>
           </svg>
-          <span>Back to mappage</span>
+          <span>Back to spotpage</span>
         </div>
       </Link>
     </Layout>
