@@ -6,7 +6,7 @@ const Detail = () => {
   const router = useRouter();
   const { id } = router.query;
   return (
-    <Layout title="見どころ一覧">
+    <Layout title={places.name}>
       <h1>詳細ページ</h1>
     </Layout>
   );

@@ -11,7 +11,7 @@ const Spot = () => {
           // places.map((place) => <div><Link href={`/locations/${place.id}`}><a>{place.name}</a></Link></div>)}
           places.map((place) => (
             <div>
-              <Link href={`/locations/${places.indexOf(place) + 1}`}>
+              <Link href={`/locations/${places.indexOf(place)}`}>
                 <a>{place.name}</a>
               </Link>
             </div>
