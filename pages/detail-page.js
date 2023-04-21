@@ -1,14 +1,10 @@
 import Layout from "../components/Layout";
-import { cities } from "../lib/seeds/cities";
+import { places } from "../lib/seeds/seedHelpers";
 
 const Detail = () => {
   return (
     <Layout title="見どころ一覧">
-      <h1>見どころ一覧</h1>
-      <div>
-        {cities &&
-          cities.map((city) => <div>{`${city.prefecture}:${city.city}`}</div>)}
-      </div>
+      <h1>詳細ページ</h1>
     </Layout>
   );
 };

@@ -10,7 +10,7 @@ export default function Layout({ children, title = "みやこナビ" }) {
       </Head>
       <header className="sticky top-0">
         <nav className="h-14 bg-gray-800 w-screen">
-          <div className="float-left text-xl text-gray-300 pl-40 mt-3">
+          <div className="float-left text-2xl text-gray-300 pl-40 mt-2.5">
             <a href="#">みやこナビ</a>
           </div>
           <div className="float-right pr-32  mt-3">
@@ -20,9 +20,14 @@ export default function Layout({ children, title = "みやこナビ" }) {
                   Home
                 </a>
               </Link>
-              <Link href="/map-page">
+              {/* <Link href="/map-page">
                 <a className="text-gray-300 hover:bg-gray-700 px-3 py-2 rounded">
                   Map
+                </a>
+              </Link> */}
+              <Link href="spot-page">
+                <a className="text-gray-300 hover:bg-gray-700 px-3 py-2 rounded">
+                  Spot
                 </a>
               </Link>
               <Link href="detail-page">
@@ -30,6 +35,7 @@ export default function Layout({ children, title = "みやこナビ" }) {
                   Detail
                 </a>
               </Link>
+              
             </div>
           </div>
         </nav>
