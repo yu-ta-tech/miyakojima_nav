@@ -6,9 +6,8 @@ const Spot = () => {
   return (
     <Layout title="見どころ一覧">
       <h1>見どころ一覧</h1>
-      <div>
+      <div className="text-xl">
         {places &&
-          // places.map((place) => <div><Link href={`/locations/${place.id}`}><a>{place.name}</a></Link></div>)}
           places.map((place) => (
             <div>
               <Link href={`/locations/${places.indexOf(place)}`}>

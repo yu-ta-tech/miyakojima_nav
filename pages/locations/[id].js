@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Layout from "../../components/Layout";
+import Image from "next/image";
 import { cities } from "../../lib/seeds/cities";
 import { places } from "../../lib/seeds/seedHelpers";
 import { useRouter } from "next/router";
@@ -10,7 +11,8 @@ export default function Detail() {
   const { id } = router.query;
   return (
     <Layout title={`${places[id].name} | みやこナビ`}>
-      <p>{cities[id].city}</p>
+      <Image src="/images/mamorukun.jpg" width={144} height={144} alt="mamorukun" />
+      <h2 className="text-2xl">{cities[id].city}</h2>
       <Link href="/spot-page">
         <span>Back to spotpage</span>
       </Link>
@@ -18,7 +20,7 @@ export default function Detail() {
   );
 }
 
-// import { getAllLocationIds, getLocationData } from "../../lib/location";
+// import { getA llLocationIds, getLocationData } from "../../lib/location";
 
 // export default function Location({ location }) {
 //   if (!location) {

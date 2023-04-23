@@ -30,11 +30,11 @@ export default function Layout({ children, title = "みやこナビ" }) {
                   Spot
                 </a>
               </Link>
-              <Link href="detail-page">
+              {/* <Link href="detail-page">
                 <a className="text-gray-300 hover:bg-gray-700 px-3 py-2 rounded">
                   Detail
                 </a>
-              </Link>
+              </Link> */}
               
             </div>
           </div>
