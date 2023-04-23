@@ -20,16 +20,21 @@ const Spot = () => {
               />
               <div className="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
                 <div className="mb-8">
-                  <div className="text-gray-900 font-bold text-xl mb-2">
-                    <Link href={`/locations/${places.indexOf(place)}`}>
-                      <a>{place.name}</a>
-                    </Link>
+                  <div className="text-gray-700 font-bold text-xl mb-2">
+                    {place.name}
                   </div>
                   <p className="text-gray-700 text-base">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                     Voluptatibus quia, nulla! Maiores et perferendis eaque,
                     exercitationem praesentium nihil.
                   </p>
+                </div>
+                <div className="mb-3">
+                  <Link href={`/locations/${places.indexOf(place)}`}>
+                    <button class="bg-blue-500 hover:bg-blue-700 text-white text-sm rounded px-2 h-8">
+                      {`${place.name}の詳細`}
+                    </button>
+                  </Link>
                 </div>
                 <div className="flex items-center">
                   <div className="text-sm">
