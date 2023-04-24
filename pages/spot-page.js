@@ -1,8 +1,8 @@
 import Link from "next/link";
 import Layout from "../components/Layout";
 import Image from "next/image";
-import { places } from "../lib/seeds/seedHelpers";
-import { spots } from "../lib/seeds/cities";
+import { places } from "../lib/spots_id";
+import { spots } from "../lib/spots";
 
 const Spot = () => {
   return (
