@@ -16,84 +16,30 @@ export default function Detail() {
 
   return (
     <Layout title={`${places[id].name} | みやこナビ`}>
-      <div className="max-w-sm rounded overflow-hidden shadow-lg">
-        <div className="flex content-center justify-center">
+      <div className="max-w-lg rounded overflow-hidden shadow-lg m-5 pb-4">
           <Image
             src={`/images/${id}.jpg`}
-            width={384}
+            width={512}
             height={384}
             alt={places[id].name}
             objectFit="contain"
           />
-        </div>
-        <div className="px-6 py-4">
-          <div className="font-bold text-xl mb-2">{spots[id].name}</div>
-          <p className="text-gray-700 text-base">
+        <div className="mx-6 my-4">
+          <div className="font-bold text-xl mb-3">{spots[id].name}</div>
+          <p className="text-gray-700 text-sm py-2">
             {spots[id].description}
           </p>
         </div>
-        <div className="px-6 pt-4 pb-2">{spots[id].address}</div>
-        <div className="px-6 pt-4 pb-2">{spots[id].tel}</div>
+        <div className="text-gray-500 px-6 pt-3 pb-3">住所:{spots[id].address}</div>
+        <div className="text-gray-500 px-6 pb-3">TEL:{spots[id].tel}</div>
+        <div className="text-gray-500 px-6 pb-3">URL:{spots[id].url}</div>
+        <div className="text-gray-500 px-6 pb-3">営業時間:{spots[id].open}</div>
+        <div className="text-gray-500 px-6 pb-12">休業日:{spots[id].holiday}</div>
 
         <Link href="/spot-page">
-          <span>Back to spotpage</span>
+          <a className="p-6 text-blue-500 underline">一覧に戻る</a>
         </Link>
       </div>
     </Layout>
   );
 }
-
-// import { getA llLocationIds, getLocationData } from "../../lib/location";
-
-// export default function Location({ location }) {
-//   if (!location) {
-//     return <div>Loading...</div>;
-//   }
-
-//   return (
-//     <Layout title={location.title}>
-//       <p>
-//         {"ID : "}
-//         {location.id}
-//       </p>
-//       <p>{location.title}</p>
-//       <p>{location.body}</p>
-//       <Link href="/spot-page">
-//         <div>
-//           <svg
-//             fill="none"
-//             stroke="currentColor"
-//             strokeWidth="1.5"
-//             viewBox="0 0 24 24"
-//             xmlns="http://www.w3.org/2000/svg"
-//             aria-hidden="true"
-//           >
-//             <path
-//               strokeLinecap="round"
-//               strokeLinejoin="round"
-//               d="M18.75 19.5l-7.5-7.5 7.5-7.5m-6 15L5.25 12l7.5-7.5"
-//             ></path>
-//           </svg>
-//           <span>Back to spotpage</span>
-//         </div>
-//       </Link>
-//     </Layout>
-//   );
-// }
-
-// export async function getStaticPaths() {
-//   const paths = await getAllLocationIds();
-
-//   return {
-//     paths,
-//     fallback: false,
-//   };
-// }
-// export async function getStaticProps({ params }) {
-//   const { location: location } = await getLocationData(params.id);
-//   return {
-//     props: {
-//       location,
-//     },
-//   };
-// }
