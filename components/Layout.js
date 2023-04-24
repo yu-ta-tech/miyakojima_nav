@@ -8,7 +8,7 @@ export default function Layout({ children, title = "みやこナビ" }) {
       <Head>
         <title>{title}</title>
       </Head>
-      <header className="sticky top-0">
+      <header className="sticky top-0 z-10">
         <nav className="h-14 bg-gray-800 w-screen">
           <div className="float-left text-2xl text-gray-300 pl-40 mt-2.5">
             <a href="#">みやこナビ</a>
