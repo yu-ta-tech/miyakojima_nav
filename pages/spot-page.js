@@ -12,8 +12,8 @@ const Spot = () => {
           places.map((place) => (
             <div className="max-w-sm w-full lg:max-w-7xl lg:flex my-3">
               <Image
-                className="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden"
-                src="/images/mamorukun.jpg"
+                className='h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden objectFit="contain"'
+                src={`/images/${places.indexOf(place)}.jpg`}
                 width={256}
                 height={256}
                 alt="mamorukun"
@@ -26,7 +26,7 @@ const Spot = () => {
                   <p className="text-gray-700 text-base">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                     Voluptatibus quia, nulla! Maiores et perferendis eaque,
-                    exercitationem praesentium nihil.
+                    exercitationem praesentium nihil
                   </p>
                 </div>
                 <div className="mb-3">
@@ -38,9 +38,6 @@ const Spot = () => {
                 </div>
                 <div className="flex items-center">
                   <div className="text-sm">
-                    <p className="text-gray-900 leading-none">
-                      Jonathan Reinink
-                    </p>
                     <p className="text-gray-600">Aug 18</p>
                   </div>
                 </div>

@@ -2,6 +2,7 @@ import Link from "next/link";
 import Layout from "../../components/Layout";
 import Image from "next/image";
 import { cities } from "../../lib/seeds/cities";
+import { spots } from "../../lib/seeds/cities";
 import { places } from "../../lib/seeds/seedHelpers";
 import { useRouter } from "next/router";
 // import { handler } from "../api/hello";
@@ -11,11 +12,30 @@ export default function Detail() {
   const { id } = router.query;
   return (
     <Layout title={`${places[id].name} | みやこナビ`}>
-      <Image src="/images/mamorukun.jpg" width={144} height={144} alt="mamorukun" />
-      <h2 className="text-2xl">{cities[id].city}</h2>
-      <Link href="/spot-page">
-        <span>Back to spotpage</span>
-      </Link>
+      <div className="max-w-sm rounded overflow-hidden shadow-lg">
+        <div className="flex content-center justify-center">
+          <Image
+            src={`/images/${id}.jpg`}
+            // src="/images/1.jpg"
+            width={384}
+            height={384}
+            alt="mamorukun"
+            objectFit="contain"
+          />
+        </div>
+        <div className="px-6 py-4">
+          <div className="font-bold text-xl mb-2">The Coldest Sunset</div>
+          <p className="text-gray-700 text-base">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Voluptatibus quia, nulla! Maiores et perferendis eaque,
+            exercitationem praesentium nihil.
+          </p>
+        </div>
+        <div className="px-6 pt-4 pb-2"></div>
+        <Link href="/spot-page">
+          <span>Back to spotpage</span>
+        </Link>
+      </div>
     </Layout>
   );
 }
