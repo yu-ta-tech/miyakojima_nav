@@ -10,7 +10,7 @@ const Spot = () => {
       <div className="text-xl">
         {places &&
           places.map((place) => (
-            <div className="max-w-sm w-full lg:max-w-7xl lg:flex my-3">
+            <div key={place.id} className="max-w-sm w-full lg:max-w-7xl lg:flex my-3">
               <Image
                 className='h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden objectFit="contain"'
                 src={`/images/${places.indexOf(place)}.jpg`}
@@ -31,7 +31,7 @@ const Spot = () => {
                 </div>
                 <div className="mb-3">
                   <Link href={`/locations/${places.indexOf(place)}`}>
-                    <button class="bg-blue-500 hover:bg-blue-700 text-white text-sm rounded px-2 h-8">
+                    <button className="bg-blue-500 hover:bg-blue-700 text-white text-sm rounded px-2 h-8">
                       {`${place.name}の詳細`}
                     </button>
                   </Link>

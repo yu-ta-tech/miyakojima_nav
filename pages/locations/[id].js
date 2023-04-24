@@ -1,37 +1,40 @@
 import Link from "next/link";
 import Layout from "../../components/Layout";
 import Image from "next/image";
-import { cities } from "../../lib/seeds/cities";
-import { spots } from "../../lib/seeds/cities";
+import { spots,cities } from "../../lib/seeds/cities";
 import { places } from "../../lib/seeds/seedHelpers";
 import { useRouter } from "next/router";
-// import { handler } from "../api/hello";
 
 export default function Detail() {
   const router = useRouter();
   const { id } = router.query;
+
+  //router.queryが初回レンダリング時にundefinedになるため
+  if (!router.isReady) {
+    return null
+  }
+
   return (
     <Layout title={`${places[id].name} | みやこナビ`}>
       <div className="max-w-sm rounded overflow-hidden shadow-lg">
         <div className="flex content-center justify-center">
           <Image
             src={`/images/${id}.jpg`}
-            // src="/images/1.jpg"
             width={384}
             height={384}
-            alt="mamorukun"
+            alt={places[id].name}
             objectFit="contain"
           />
         </div>
         <div className="px-6 py-4">
-          <div className="font-bold text-xl mb-2">The Coldest Sunset</div>
+          <div className="font-bold text-xl mb-2">{spots[id].name}</div>
           <p className="text-gray-700 text-base">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Voluptatibus quia, nulla! Maiores et perferendis eaque,
-            exercitationem praesentium nihil.
+            {spots[id].description}
           </p>
         </div>
-        <div className="px-6 pt-4 pb-2"></div>
+        <div className="px-6 pt-4 pb-2">{spots[id].address}</div>
+        <div className="px-6 pt-4 pb-2">{spots[id].tel}</div>
+
         <Link href="/spot-page">
           <span>Back to spotpage</span>
         </Link>
