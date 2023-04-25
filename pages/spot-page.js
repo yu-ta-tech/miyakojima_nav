@@ -23,7 +23,7 @@ const Spot = () => {
           initialViewState={{
             longitude: "125.3246",
             latitude: "24.7673",
-            zoom: 12,
+            zoom: 11,
           }}
           style={{ width: "70%", height: "60vh" }}
           mapStyle={"mapbox://styles/mapbox/light-v10"}
