@@ -3,42 +3,13 @@ import Layout from "../components/Layout";
 import Image from "next/image";
 import { places } from "../lib/spots_id";
 import { spots } from "../lib/spots";
-import Map, {
-  Layer,
-  LayerProps,
-  MapProvider,
-  Marker,
-  MarkerDragEvent,
-  NavigationControl,
-  Source,
-  useMap,
-  FullscreenControl,
-} from "react-map-gl";
-import "mapbox-gl/dist/mapbox-gl.css";
+import ClusterMap from "../components/ClusterMap";
 
 const Spot = () => {
   return (
     <Layout title="見どころ一覧">
-      <Map
-        id="myMap"
-        initialViewState={{
-          longitude: "125.3246",
-          latitude: "24.7673",
-          zoom: 10,
-        }}
-        style={{ top: "20px", width: "70%", height: "50vh" }}
-        mapStyle={"mapbox://styles/mapbox/light-v10"}
-        mapboxAccessToken={process.env.NEXT_PUBLIC_MAP_BOX_TOKEN}
-        // onClick={onClick}
-      >
-        <Marker longitude={125.3246} latitude={24.7673} anchor="bottom">
-          <Image src="/images/marker.png" width={30} height={30} />
-        </Marker>
-        <NavigationControl />
-        <FullscreenControl position="bottom-right" />
-      </Map>
+      <ClusterMap />
       <h1 className="text-3xl py-6 mt-2 font-bold">見どころ一覧</h1>
-
       <div className="text-xl">
         {places &&
           places.map((place) => (

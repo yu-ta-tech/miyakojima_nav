@@ -20,22 +20,11 @@ export default function Layout({ children, title = "みやこナビ" }) {
                   Home
                 </a>
               </Link>
-              {/* <Link href="/map-page">
-                <a className="text-gray-300 hover:bg-gray-700 px-3 py-2 rounded">
-                  Map
-                </a>
-              </Link> */}
               <Link href="/spot-page">
                 <a className="text-gray-300 hover:bg-gray-700 px-3 py-2 rounded">
                   Spot
                 </a>
               </Link>
-              {/* <Link href="detail-page">
-                <a className="text-gray-300 hover:bg-gray-700 px-3 py-2 rounded">
-                  Detail
-                </a>
-              </Link> */}
-              
             </div>
           </div>
         </nav>
