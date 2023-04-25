@@ -11,7 +11,7 @@ export default function Layout({ children, title = "みやこナビ" }) {
       <header className="sticky top-0 z-10">
         <nav className="h-14 bg-gray-800 w-screen">
           <div className="float-left text-2xl text-gray-300 pl-40 mt-2.5">
-            <a href="#">みやこナビ</a>
+            <a href="/">みやこナビ</a>
           </div>
           <div className="float-right pr-32  mt-3">
             <div className="flex space-x-4">
@@ -25,7 +25,7 @@ export default function Layout({ children, title = "みやこナビ" }) {
                   Map
                 </a>
               </Link> */}
-              <Link href="spot-page">
+              <Link href="/spot-page">
                 <a className="text-gray-300 hover:bg-gray-700 px-3 py-2 rounded">
                   Spot
                 </a>

@@ -38,9 +38,11 @@ export default function Detail() {
           休業日:{spots[id].holiday}
         </div>
 
-        <Link href="/spot-page">
-          <a className="p-6 text-blue-500 underline">一覧に戻る</a>
-        </Link>
+        <div className="m-6 text-blue-500 underline">
+          <Link href="/spot-page">
+            <a>一覧に戻る</a>
+          </Link>
+        </div>
       </div>
     </Layout>
   );
