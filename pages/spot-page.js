@@ -28,14 +28,14 @@ const Spot = () => {
                 <div className="text-gray-700 font-bold text-xl pb-1">
                   {place.name}
                 </div>
-                <div className="px-1 pb-2">
+                <div className="px-1 pb-3">
                   <p className="text-gray-700 text-base">
                     {spots[place.id].description}
                   </p>
                 </div>
                 <div className="flex items-center px-1 pb-4">
                   <div className="text-sm">
-                    <p className="text-gray-600">Aug 18</p>
+                    <p className="text-gray-500">{place.address}</p>
                   </div>
                 </div>
                 <div>
