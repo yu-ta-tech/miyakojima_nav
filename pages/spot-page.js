@@ -12,6 +12,7 @@ import Map, {
   NavigationControl,
   Source,
   useMap,
+  FullscreenControl,
 } from "react-map-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 
@@ -23,9 +24,9 @@ const Spot = () => {
         initialViewState={{
           longitude: "125.3246",
           latitude: "24.7673",
-          zoom: 11,
+          zoom: 10,
         }}
-        style={{ width: "70%", height: "60vh" }}
+        style={{ top: "20px", width: "70%", height: "50vh" }}
         mapStyle={"mapbox://styles/mapbox/light-v10"}
         mapboxAccessToken={process.env.NEXT_PUBLIC_MAP_BOX_TOKEN}
         // onClick={onClick}
@@ -33,8 +34,10 @@ const Spot = () => {
         <Marker longitude={125.3246} latitude={24.7673} anchor="bottom">
           <Image src="/images/marker.png" width={30} height={30} />
         </Marker>
+        <NavigationControl />
+        <FullscreenControl position="bottom-right" />
       </Map>
-      <h1 className="text-3xl py-4 font-bold">見どころ一覧</h1>
+      <h1 className="text-3xl py-6 mt-2 font-bold">見どころ一覧</h1>
 
       <div className="text-xl">
         {places &&
