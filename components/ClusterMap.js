@@ -41,7 +41,7 @@ export default function ClusterMap() {
   };
   return (
     <Map
-      id="myMap"
+      id="ClusterMap"
       initialViewState={{
         longitude: "125.3246",
         latitude: "24.7673",
