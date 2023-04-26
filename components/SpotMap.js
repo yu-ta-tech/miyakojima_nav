@@ -31,7 +31,8 @@ export default function SpotMap() {
         zoom: 12,
       }}
       style={{ top: "20px", bottom: "20px", width: 448, height: 408 }}
-      mapStyle={"mapbox://styles/mapbox/light-v10"}
+      // スタイル仕様 https://docs.mapbox.com/mapbox-gl-js/style-spec/
+      mapStyle={"mapbox://styles/mapbox/streets-v8"}
       mapboxAccessToken={process.env.NEXT_PUBLIC_MAP_BOX_TOKEN}
     >
       <Marker longitude={spots[id].longitude} latitude={spots[id].latitude} anchor="bottom">

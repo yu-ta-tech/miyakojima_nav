@@ -48,6 +48,7 @@ export default function ClusterMap() {
         zoom: 10,
       }}
       style={{ top: "20px", width: "70%", height: "50vh" }}
+      // スタイル仕様 https://docs.mapbox.com/mapbox-gl-js/style-spec/
       mapStyle={"mapbox://styles/mapbox/light-v10"}
       mapboxAccessToken={process.env.NEXT_PUBLIC_MAP_BOX_TOKEN}
       onClick={onClick}
@@ -69,7 +70,6 @@ export default function ClusterMap() {
         <Image src="/images/marker.png" width={30} height={30} />
       </Marker>
       <NavigationControl />
-      <FullscreenControl position="bottom-right" />
     </Map>
   );
 }
