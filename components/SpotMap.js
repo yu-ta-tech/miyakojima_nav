@@ -36,7 +36,7 @@ export default function SpotMap() {
       mapboxAccessToken={process.env.NEXT_PUBLIC_MAP_BOX_TOKEN}
     >
       <Marker longitude={spots[id].longitude} latitude={spots[id].latitude} anchor="bottom">
-        <Image src="/images/marker.png" width={30} height={30} />
+        {/* <Image src="/images/marker.png" width={30} height={30} /> */}
       </Marker>
       <NavigationControl />
       <FullscreenControl position="bottom-right" />

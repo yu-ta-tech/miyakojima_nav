@@ -66,8 +66,12 @@ export default function ClusterMap() {
         <Layer {...clusterCountLayer} />
         <Layer {...unclusteredPointLayer} />
       </Source>
+
+      {/* データある分だけMarker表示するロジック考える */}
       <Marker longitude={125.3246} latitude={24.7673} anchor="bottom">
         <Image src="/images/marker.png" width={30} height={30} />
+      </Marker>
+      <Marker longitude={125.2713256113998} latitude={24.8029400222399} anchor="bottom">
       </Marker>
       <NavigationControl />
     </Map>
