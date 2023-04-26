@@ -1,8 +1,8 @@
 import Link from "next/link";
 import Layout from "../components/Layout";
 import Image from "next/image";
-import { places } from "../lib/spots_id";
-import { spots } from "../lib/spots";
+import { places } from "../lib/spotLists";
+import { spots } from "../lib/spots_detailData";
 import ClusterMap from "../components/ClusterMap";
 
 const Spot = () => {

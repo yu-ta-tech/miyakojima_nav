@@ -3,8 +3,8 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import Layout from "../../components/Layout";
 import SpotMap from "../../components/SpotMap";
-import { spots } from "../../lib/spots";
-import { places } from "../../lib/spots_id";
+import { spots } from "../../lib/spots_detailData";
+import { places } from "../../lib/spotLists";
 
 export default function Detail() {
   const router = useRouter();

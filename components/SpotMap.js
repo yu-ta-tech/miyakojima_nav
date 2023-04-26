@@ -12,7 +12,7 @@ import Map, {
   FullscreenControl,
 } from "react-map-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
-import { spots } from "../lib/spots";
+import { spots } from "../lib/spots_detailData";
 
 export default function SpotMap() {
   const router = useRouter();

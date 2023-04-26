@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { useRef } from "react";
-import { spots } from "../lib/spots";
+import { spots } from "../lib/spots_detailData";
 import Map, {
   Layer,
   LayerProps,
