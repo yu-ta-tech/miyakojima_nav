@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { useRef } from "react";
+import { spots } from "../lib/spots";
 import Map, {
   Layer,
   LayerProps,
@@ -67,12 +68,14 @@ export default function ClusterMap() {
         <Layer {...unclusteredPointLayer} />
       </Source>
 
-      {/* データある分だけMarker表示するロジック考える */}
-      <Marker longitude={125.3246} latitude={24.7673} anchor="bottom">
-        <Image src="/images/marker.png" width={30} height={30} />
-      </Marker>
-      <Marker longitude={125.2713256113998} latitude={24.8029400222399} anchor="bottom">
-      </Marker>
+      {spots &&
+        spots.map((spot) => (
+          <Marker
+            longitude={spot.longitude}
+            latitude={spot.latitude}
+            anchor="bottom"
+          />
+        ))}
       <NavigationControl />
     </Map>
   );

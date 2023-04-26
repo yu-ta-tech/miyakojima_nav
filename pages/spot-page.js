@@ -16,7 +16,7 @@ const Spot = () => {
             <div
               key={place.id}
               className="max-w-sm w-full lg:max-w-7xl lg:flex my-3"
-            >
+            > 
               <div className="flex-shrink-0 grid">
                 <Image
                   className="lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden"
