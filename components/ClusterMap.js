@@ -22,14 +22,20 @@ import "mapbox-gl/dist/mapbox-gl.css";
 
 export default function ClusterMap() {
   const [showPopup, setShowPopup] = useState(false);
+  const [destination, setDestination] = useState(null);
 
   const mapRef = useRef(null);
 
-  // 
   const onClick = (event) => {
+    if (showPopup) return;
+    setShowPopup(true);
+    setDestination({ lat: event.lngLat.lat, lng: event.lngLat.lng });
+
     // const lon = event.longitude;
     // const lat = event.latitude;
-    showPopup ? setShowPopup(false) : setShowPopup(true);
+    // console.log(event.lngLat.lat);
+    // console.log(event.lngLat.lng);
+    // showPopup ? setShowPopup(false) : setShowPopup(true);
   };
 
   // const onClick = (event) => {
@@ -86,22 +92,14 @@ export default function ClusterMap() {
               latitude={spot.latitude}
               anchor="bottom"
             />
-            {/* {showPopup && (
-              <Popup
-                longitude={spot.longitude}
-                latitude={spot.latitude}
-                anchor="bottom"
-                onClose={() => setShowPopup(false)}
-              >
-                aaa
-              </Popup>
-            )} */}
           </div>
         ))}
+        {/* なぜかdestination && にしたら、一回だけPopup出る
+        　　　あとは、Markerある位置のみPopup出したい */}
       {showPopup && (
         <Popup
-          longitude={spots[0].longitude}
-          latitude={spots[0].latitude}
+          longitude={destination.lng}
+          latitude={destination.lat}
           anchor="bottom"
           onClose={() => setShowPopup(false)}
         >
