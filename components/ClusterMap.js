@@ -26,16 +26,16 @@ export default function ClusterMap() {
 
   const mapRef = useRef(null);
 
+  // onClickでMarkerのlngLat取得→Popupに代入したい
   const onClick = (event) => {
-    if (showPopup) return;
-    setShowPopup(true);
-    setDestination({ lat: event.lngLat.lat, lng: event.lngLat.lng });
-
-    // const lon = event.longitude;
-    // const lat = event.latitude;
-    // console.log(event.lngLat.lat);
-    // console.log(event.lngLat.lng);
-    // showPopup ? setShowPopup(false) : setShowPopup(true);
+    if(showPopup) return;
+    // console.log(event);
+    const point = event.target.on();
+    // console.dir(point._lngLat.lat);
+    setShowPopup(true)
+    setDestination({lng: point._lngLat.lng, lat: point._lngLat.lat})
+    console.log(destination)
+    console.log(showPopup)
   };
 
   // const onClick = (event) => {
@@ -68,7 +68,6 @@ export default function ClusterMap() {
       // スタイル仕様 https://docs.mapbox.com/mapbox-gl-js/style-spec/
       mapStyle={"mapbox://styles/mapbox/light-v10"}
       mapboxAccessToken={process.env.NEXT_PUBLIC_MAP_BOX_TOKEN}
-      onClick={onClick}
     >
       {/* clustermapにしたいけど、できてない。https://visgl.github.io/react-map-gl/examples/clusters */}
       {/* <Source
@@ -91,10 +90,11 @@ export default function ClusterMap() {
               longitude={spot.longitude}
               latitude={spot.latitude}
               anchor="bottom"
+              onClick={onClick}
             />
           </div>
         ))}
-        {/* なぜかdestination && にしたら、一回だけPopup出る
+      {/* なぜかdestination && にしたら、一回だけPopup出る → booleanじゃないから！
         　　　あとは、Markerある位置のみPopup出したい */}
       {showPopup && (
         <Popup
