@@ -55,6 +55,7 @@ export default function SpotMap() {
           <Popup
             longitude={spots[id].longitude}
             latitude={spots[id].latitude}
+            offset={40}
             anchor="bottom"
             onClose={() => setShowPopup(false)}
             closeOnClick={false}

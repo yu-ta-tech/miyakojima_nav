@@ -3,12 +3,12 @@ import Layout from "../components/Layout";
 import Image from "next/image";
 import { places } from "../lib/spotLists";
 import { spots } from "../lib/spots_detailData";
-import ClusterMap from "../components/ClusterMap";
+import AllMap from "../components/AllMap";
 
 const Spot = () => {
   return (
     <Layout title="見どころ一覧">
-      <ClusterMap />
+      <AllMap />
       <h1 className="text-3xl py-6 mt-2 font-bold">見どころ一覧</h1>
       <div className="text-xl">
         {places &&
@@ -21,8 +21,8 @@ const Spot = () => {
                 <Image
                   className="lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden"
                   src={`/images/${places.indexOf(place)}.jpg`}
-                  width={312}
-                  height={208}
+                    width={312}
+                    height={208}
                   alt={place.name}
                 />
               </div>
