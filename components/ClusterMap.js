@@ -22,20 +22,18 @@ import "mapbox-gl/dist/mapbox-gl.css";
 
 export default function ClusterMap() {
   const [showPopup, setShowPopup] = useState(false);
-  const [destination, setDestination] = useState(null);
+  let [destination, setDestination] = useState(null);
 
   const mapRef = useRef(null);
 
   // onClickでMarkerのlngLat取得→Popupに代入したい
   const onClick = (event) => {
-    if(showPopup) return;
-    // console.log(event);
+    if(showPopup) return ;
     const point = event.target.on();
-    // console.dir(point._lngLat.lat);
-    setShowPopup(true)
-    setDestination({lng: point._lngLat.lng, lat: point._lngLat.lat})
-    console.log(destination)
-    console.log(showPopup)
+    setDestination({ lng: point._lngLat.lng, lat: point._lngLat.lat });
+    setShowPopup(true);
+    console.log(destination.lng);
+    console.log(destination.lat);
   };
 
   // const onClick = (event) => {
@@ -94,14 +92,16 @@ export default function ClusterMap() {
             />
           </div>
         ))}
-      {/* なぜかdestination && にしたら、一回だけPopup出る → booleanじゃないから！
-        　　　あとは、Markerある位置のみPopup出したい */}
+        {/* 初回クリック時にdestinationがnullで帰ってくるため、初回のみエラー出る
+        　　　しかし、２回目以降はMarkerの上にPopup出るようになった！
+        　　　あとはエラー解消と、クリックされたMarkerの情報を拾いたい */}
       {showPopup && (
         <Popup
           longitude={destination.lng}
           latitude={destination.lat}
           anchor="bottom"
           onClose={() => setShowPopup(false)}
+          closeOnClick={false}
         >
           aaa
         </Popup>

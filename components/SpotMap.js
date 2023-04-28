@@ -17,7 +17,7 @@ import "mapbox-gl/dist/mapbox-gl.css";
 import { spots } from "../lib/spots_detailData";
 
 export default function SpotMap() {
-  const [showPopup, setShowPopup] = useState(true);
+  const [showPopup, setShowPopup] = useState(false);
 
   const router = useRouter();
   const { id } = router.query;
@@ -28,9 +28,6 @@ export default function SpotMap() {
   }
 
   const onClick = () => {
-    // if(setShowPopup) return;
-    // setShowPopup(true);
-    // console.log(showPopup)
     showPopup ? setShowPopup(false) : setShowPopup(true);
     console.log(showPopup)
   };
@@ -56,12 +53,13 @@ export default function SpotMap() {
         />
         {showPopup && (
           <Popup
-            longitude={spots[0].longitude}
-            latitude={spots[0].latitude}
+            longitude={spots[id].longitude}
+            latitude={spots[id].latitude}
             anchor="bottom"
-            // onClose={() => setShowPopup(false)}
+            onClose={() => setShowPopup(false)}
+            closeOnClick={false}
           >
-            aaa
+            {spots[id].name}
           </Popup>
         )}
         <NavigationControl />
