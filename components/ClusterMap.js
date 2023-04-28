@@ -22,7 +22,7 @@ import "mapbox-gl/dist/mapbox-gl.css";
 
 export default function ClusterMap() {
   const [showPopup, setShowPopup] = useState(false);
-  let [destination, setDestination] = useState(null);
+  const [destination, setDestination] = useState(null);
 
   const mapRef = useRef(null);
 
@@ -32,8 +32,6 @@ export default function ClusterMap() {
     const point = event.target.on();
     setDestination({ lng: point._lngLat.lng, lat: point._lngLat.lat });
     setShowPopup(true);
-    console.log(destination.lng);
-    console.log(destination.lat);
   };
 
   // const onClick = (event) => {
