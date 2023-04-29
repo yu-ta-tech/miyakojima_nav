@@ -36,14 +36,6 @@ export default function AllMap() {
     []
   );
 
-  // onClickでMarkerのlngLat取得→Popupに代入したい
-  // const onClick = (event) => {
-  //   if(showPopup) return ;
-  //   const point = event.target.on();
-  //   console.log(event)
-  //   setDestination({ lng: point._lngLat.lng, lat: point._lngLat.lat });
-  //   setShowPopup(true);
-  // };
 
   return (
     <Map
@@ -60,20 +52,6 @@ export default function AllMap() {
     >
       {markers}
 
-      {/* {spots &&
-        spots.map((spot, i) => (
-          <div key={i}>
-            <Marker
-              longitude={spot.longitude}
-              latitude={spot.latitude}
-              anchor="bottom"
-              onClick={onClick}
-            />
-          </div>
-        ))} */}
-      {/* 初回クリック時にdestinationがnullで帰ってくるため、初回のみエラー出る
-        　　　しかし、２回目以降はMarkerの上にPopup出るようになった！
-        　　　あとはエラー解消と、クリックされたMarkerの情報を拾いたい */}
       {popupInfo && (
         <Popup
           longitude={popupInfo.longitude}
@@ -81,11 +59,13 @@ export default function AllMap() {
           anchor="top"
           offset={-20}
           onClose={() => setPopupInfo(null)}
-          // closeOnClick={false}
         >
           <Link href={`/locations/${spots.indexOf(popupInfo)}`}>
-            <div className="text-sm text-blue-500 underline">{popupInfo.name}</div>
+            <span className="text-sm text-blue-500 hover:text-blue-700 underline">
+              {popupInfo.name}
+            </span>
           </Link>
+          <br />
           <Image
             width={160}
             height={120}

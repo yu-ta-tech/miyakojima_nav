@@ -43,14 +43,14 @@ export default function Detail() {
               </Link>
             </div>
             <div className="text-gray-500 pb-2">営業時間:{spots[id].open}</div>
-            <div className="text-gray-500 pb-6">休業日:{spots[id].holiday}</div>
+            <div className="text-gray-500 pb-12">休業日:{spots[id].holiday}</div>
           </div>
 
-          <div className="m-6 text-blue-500 underline">
+          <span className="m-6 text-blue-500 hover:text-blue-700 underline">
             <Link href="/spot-page">
               <a>一覧に戻る</a>
             </Link>
-          </div>
+          </span>
         </div>
         <SpotMap />
       </div>
