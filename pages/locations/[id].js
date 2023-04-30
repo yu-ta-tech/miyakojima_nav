@@ -17,8 +17,11 @@ export default function Detail() {
 
   return (
     <Layout title={`${places[id].name} | みやこナビ`}>
-      <div className="flex">
-        <div className="max-w-xl rounded overflow-hidden shadow-lg m-5 pb-4">
+      <div className="flex flex-col items-center lg:flex-row-reverse lg:items-start">
+        <div className="mt-6">
+          <SpotMap />
+        </div>
+        <div className="max-w-xl rounded shadow-lg m-5 pb-4">
           <div className="flex-shrink-0 grid">
             <Image
               src={`/images/${id}.jpg`}
@@ -43,7 +46,9 @@ export default function Detail() {
               </Link>
             </div>
             <div className="text-gray-500 pb-2">営業時間:{spots[id].open}</div>
-            <div className="text-gray-500 pb-12">休業日:{spots[id].holiday}</div>
+            <div className="text-gray-500 pb-12">
+              休業日:{spots[id].holiday}
+            </div>
           </div>
 
           <span className="m-6 text-blue-500 hover:text-blue-700 underline">
@@ -52,7 +57,6 @@ export default function Detail() {
             </Link>
           </span>
         </div>
-        <SpotMap />
       </div>
     </Layout>
   );

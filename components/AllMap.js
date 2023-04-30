@@ -36,16 +36,15 @@ export default function AllMap() {
     []
   );
 
-
   return (
     <Map
       id="ClusterMap"
       initialViewState={{
-        longitude: "125.3246",
-        latitude: "24.7673",
+        longitude: "125.30671897208508",
+        latitude: "24.7885036757072867673",
         zoom: 10,
       }}
-      style={{ top: "20px", width: "70%", height: "50vh" }}
+      style={{ top: "20px", width: "80%", height: "60vh" }}
       // スタイル仕様 https://docs.mapbox.com/mapbox-gl-js/style-spec/
       mapStyle={"mapbox://styles/mapbox/light-v10"}
       mapboxAccessToken={process.env.NEXT_PUBLIC_MAP_BOX_TOKEN}

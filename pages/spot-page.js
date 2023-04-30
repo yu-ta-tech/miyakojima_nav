@@ -9,20 +9,20 @@ const Spot = () => {
   return (
     <Layout title="見どころ一覧">
       <AllMap />
-      <h1 className="text-3xl py-6 mt-2 font-bold">見どころ一覧</h1>
-      <div className="text-xl">
+      <h1 className="text-3xl pt-6 mt-2 font-bold">見どころ一覧</h1>
+      <div className="text-xl mx-4">
         {places &&
           places.map((place) => (
             <div
               key={place.id}
               className="max-w-sm w-full lg:max-w-7xl lg:flex my-3"
-            > 
+            >
               <div className="flex-shrink-0 grid">
                 <Image
                   className="lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden"
                   src={`/images/${places.indexOf(place)}.jpg`}
-                    width={312}
-                    height={208}
+                  width={312}
+                  height={208}
                   alt={place.name}
                 />
               </div>

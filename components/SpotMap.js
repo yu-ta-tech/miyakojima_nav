@@ -33,6 +33,7 @@ export default function SpotMap() {
   };
 
   return (
+    <div className="m-4">
       <Map
         id="spotMap"
         initialViewState={{
@@ -40,7 +41,7 @@ export default function SpotMap() {
           latitude: spots[id].latitude,
           zoom: 12,
         }}
-        style={{ top: "20px", bottom: "20px", width: 448, height: 408 }}
+        style={{ bottom: "20px", width: "50vh", height: "40vh" }}
         // スタイル仕様 https://docs.mapbox.com/mapbox-gl-js/style-spec/
         mapStyle={"mapbox://styles/mapbox/streets-v8"}
         mapboxAccessToken={process.env.NEXT_PUBLIC_MAP_BOX_TOKEN}
@@ -66,5 +67,6 @@ export default function SpotMap() {
         <NavigationControl />
         <FullscreenControl position="bottom-right" />
       </Map>
+      </div>
   );
 }
