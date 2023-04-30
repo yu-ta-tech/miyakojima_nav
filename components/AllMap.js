@@ -44,7 +44,7 @@ export default function AllMap() {
         latitude: "24.7885036757072867673",
         zoom: 10,
       }}
-      style={{ top: "20px", width: "80%", height: "60vh" }}
+      style={{ top: "20px", width: "85%", height: "100%" }}
       // スタイル仕様 https://docs.mapbox.com/mapbox-gl-js/style-spec/
       mapStyle={"mapbox://styles/mapbox/light-v10"}
       mapboxAccessToken={process.env.NEXT_PUBLIC_MAP_BOX_TOKEN}

@@ -27,46 +27,43 @@ export default function SpotMap() {
     return null;
   }
 
-  const onClick = () => {
+  const onClick = (e) => {
+    e.originalEvent.stopPropagation();
     showPopup ? setShowPopup(false) : setShowPopup(true);
-    console.log(showPopup)
   };
 
   return (
-    <div className="m-4">
-      <Map
-        id="spotMap"
-        initialViewState={{
-          longitude: spots[id].longitude,
-          latitude: spots[id].latitude,
-          zoom: 12,
-        }}
-        style={{ bottom: "20px", width: "50vh", height: "40vh" }}
-        // スタイル仕様 https://docs.mapbox.com/mapbox-gl-js/style-spec/
-        mapStyle={"mapbox://styles/mapbox/streets-v8"}
-        mapboxAccessToken={process.env.NEXT_PUBLIC_MAP_BOX_TOKEN}
-      >
-        <Marker
+    <Map
+      id="spotMap"
+      initialViewState={{
+        longitude: spots[id].longitude,
+        latitude: spots[id].latitude,
+        zoom: 11,
+      }}
+      style={{ top: "15px", width: "100%", height: "100%" }}
+      // スタイル仕様 https://docs.mapbox.com/mapbox-gl-js/style-spec/
+      mapStyle={"mapbox://styles/mapbox/streets-v8"}
+      mapboxAccessToken={process.env.NEXT_PUBLIC_MAP_BOX_TOKEN}
+    >
+      <Marker
+        longitude={spots[id].longitude}
+        latitude={spots[id].latitude}
+        anchor="bottom"
+        onClick={onClick}
+      />
+      {showPopup && (
+        <Popup
           longitude={spots[id].longitude}
           latitude={spots[id].latitude}
+          offset={40}
           anchor="bottom"
-          onClick={onClick}
-        />
-        {showPopup && (
-          <Popup
-            longitude={spots[id].longitude}
-            latitude={spots[id].latitude}
-            offset={40}
-            anchor="bottom"
-            onClose={() => setShowPopup(false)}
-            closeOnClick={false}
-          >
-            {spots[id].name}
-          </Popup>
-        )}
-        <NavigationControl />
-        <FullscreenControl position="bottom-right" />
-      </Map>
-      </div>
+          onClose={() => setShowPopup(false)}
+        >
+          {spots[id].name}
+        </Popup>
+      )}
+      <NavigationControl />
+      <FullscreenControl position="bottom-right" />
+    </Map>
   );
 }

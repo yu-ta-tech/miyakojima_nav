@@ -8,7 +8,9 @@ import AllMap from "../components/AllMap";
 const Spot = () => {
   return (
     <Layout title="見どころ一覧">
-      <AllMap />
+      <div className="flex justify-center w-full h-72 md:h-96 lg:h-96">
+        <AllMap />
+      </div>
       <h1 className="text-3xl pt-6 mt-2 font-bold">見どころ一覧</h1>
       <div className="text-xl mx-4">
         {places &&
@@ -19,7 +21,6 @@ const Spot = () => {
             >
               <div className="flex-shrink-0 grid">
                 <Image
-                  className="lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden"
                   src={`/images/${places.indexOf(place)}.jpg`}
                   width={312}
                   height={208}

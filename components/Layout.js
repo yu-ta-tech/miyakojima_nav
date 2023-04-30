@@ -15,14 +15,14 @@ export default function Layout({ children, title = "みやこナビ" }) {
           </div>
           <div></div>
           <div className="pt-3 md:pl-12 lg:pl-20">
-            <div className="flex space-x-4">
+            <div className="flex">
               <Link href="/">
                 <a className="text-gray-300 hover:bg-gray-700 px-3 py-2 rounded">
                   Home
                 </a>
               </Link>
               <Link href="/spot-page">
-                <a className="text-gray-300 hover:bg-gray-700 py-2 rounded">
+                <a className="text-gray-300 hover:bg-gray-700 px-3 py-2 rounded">
                   Spot
                 </a>
               </Link>
