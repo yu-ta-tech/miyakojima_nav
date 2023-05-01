@@ -9,31 +9,27 @@ export default function Layout({ children, title = "みやこナビ" }) {
         <title>{title}</title>
       </Head>
       <header className="sticky top-0 z-10">
-        <nav className="h-14 bg-gray-800 w-screen grid grid-cols-3">
-          <div className="text-gray-300 text-lg mt-3.5 pl-10 sm:pl-20 md:pl-36 lg:text-2xl lg:pl-40 lg:mt-2.5">
+        <nav className="bg-gray-900 h-14 w-screen grid grid-cols-3">
+          <div className="text-white text-lg mt-3.5 pl-10 sm:pl-20 md:pl-36 lg:text-2xl lg:pl-40 lg:mt-2.5">
             <a href="/">みやこナビ</a>
           </div>
           <div></div>
           <div className="pt-3 md:pl-12 lg:pl-20">
             <div className="flex">
-              <Link href="/">
-                <a className="text-gray-300 hover:bg-gray-700 px-3 py-2 rounded">
-                  Home
-                </a>
-              </Link>
-              <Link href="/spot-page">
-                <a className="text-gray-300 hover:bg-gray-700 px-3 py-2 rounded">
-                  Spot
-                </a>
-              </Link>
+              <div className="text-white hover:bg-gray-700 px-3 py-2 rounded">
+                <Link href="/">ホーム</Link>
+              </div>
+              <div className="text-white hover:bg-gray-700 px-3 py-2 sm:ml-3 md:ml-5 lg:ml-10 rounded">
+                <Link href="/spot-page">スポット一覧</Link>
+              </div>
             </div>
           </div>
         </nav>
       </header>
-      <main className="justify-center items-center flex flex-col w-screen">
+      <main className="flex flex-1 justify-center items-center flex-col w-screen">
         {children}
       </main>
-      <footer className="w-full h-12 flex justify-center items-center border-t mt-auto">
+      <footer className="w-full  bg-gray-800 text-gray-300 h-10 flex justify-center items-center border-t mt-auto z-10">
         <div>&copy; みやこナビ</div>
       </footer>
     </div>

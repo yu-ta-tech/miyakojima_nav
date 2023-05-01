@@ -40,7 +40,7 @@ export default function SpotMap() {
         latitude: spots[id].latitude,
         zoom: 11,
       }}
-      style={{ top: "15px", width: "100%", height: "100%" }}
+      style={{ top: "20px", width: "100%", height: "100%" }}
       // スタイル仕様 https://docs.mapbox.com/mapbox-gl-js/style-spec/
       mapStyle={"mapbox://styles/mapbox/streets-v8"}
       mapboxAccessToken={process.env.NEXT_PUBLIC_MAP_BOX_TOKEN}

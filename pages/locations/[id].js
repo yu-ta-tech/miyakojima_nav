@@ -18,10 +18,10 @@ export default function Detail() {
   return (
     <Layout title={`${places[id].name} | みやこナビ`}>
       <div className="flex flex-col items-center lg:flex-row-reverse lg:items-start">
-        <div className="lg:w-[32rem] md:w-[32rem] w-96 h-96">
+        <div className="w-96 h-96">
           <SpotMap />
         </div>
-        <div className="max-w-xl rounded shadow-lg m-3 py-4">
+        <div className="max-w-xl rounded shadow-lg m-3 py-4 lg:py-2">
           <div className="flex-shrink-0">
             <Image
               src={`/images/${id}.jpg`}
