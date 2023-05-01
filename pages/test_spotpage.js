@@ -8,10 +8,23 @@ import AllMap from "../components/maps/AllMap";
 const Spot = () => {
   return (
     <Layout title="見どころ一覧">
+      <h1 className="text-4xl pt-4 underline">全体マップ</h1>
       <div className="flex justify-center w-full h-72 md:h-96 lg:h-96">
         <AllMap />
       </div>
-      <h1 className="text-3xl pt-6 mt-2 font-bold">見どころ一覧</h1>
+      <h1 className="text-3xl pt-6 mt-2 font-bold">
+        見どころ一覧（ジャンル別）
+      </h1>
+      <div className="pl-32 mt-6 text-base w-screen border-b">
+        <ul className="flex">
+          <li className="px-1 border-t border-x">全体</li>
+          <li className="px-1 border-t border-x">ビーチ</li>
+          <li className="px-1 border-t border-x">グルメ</li>
+          <li className="px-1 border-t border-x">買い物</li>
+          <li className="px-1 border-t border-x">イベント</li>
+          <li className="px-1 border-t border-x">フィットネス</li>
+        </ul>
+      </div>
       <div className="text-xl mx-4">
         {places &&
           places.map((place) => (

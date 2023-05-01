@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import Layout from "../../components/Layout";
-import SpotMap from "../../components/SpotMap";
+import SpotMap from "../../components/maps/SpotMap";
 import { spots } from "../../lib/spots_detailData";
 import { places } from "../../lib/spotLists";
 

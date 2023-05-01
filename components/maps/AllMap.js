@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useMemo, useState } from "react";
-import { spots } from "../lib/spots_detailData";
+import { spots } from "../../lib/spots_detailData";
 import Map, {
   Layer,
   LayerProps,
