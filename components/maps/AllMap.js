@@ -31,7 +31,14 @@ export default function AllMap() {
             e.originalEvent.stopPropagation();
             setPopupInfo(spot);
           }}
-        />
+        >
+          <Image
+            className="rounded-full"
+            width={25}
+            height={25}
+            src={`/icons/${spot.icon}.jpg`}
+          />
+        </Marker>
       )),
     []
   );
