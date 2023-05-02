@@ -34,8 +34,8 @@ export default function AllMap() {
         >
           <Image
             className="rounded-full"
-            width={25}
-            height={25}
+            width={20}
+            height={20}
             src={`/icons/${spot.icon}.jpg`}
           />
         </Marker>
