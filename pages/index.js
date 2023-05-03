@@ -14,7 +14,7 @@ export default function Home() {
           <p>あああああああ</p>
           <p>あああああああ</p>
           <div className="flex justify-center mb-20">
-            <span className="transition-all duration-500 px-4 py-2 bg-gray-50 rounded">
+            <span className="transition-all duration-500 px-4 py-2 ring-yellow-300 text-black bg-gray-50 hover:bg-black hover:text-gray-50 hover:ring-4 rounded">
               <Link href="/spot-page">ボタン</Link>
             </span>
           </div>
