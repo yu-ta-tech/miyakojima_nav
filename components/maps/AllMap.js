@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { spots } from "../../lib/spots_detailData";
 import Map, {
   Layer,
@@ -16,8 +16,29 @@ import Map, {
 } from "react-map-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 
-export default function AllMap() {
+export default function AllMap({ tabIndex }) {
   const [popupInfo, setPopupInfo] = useState(null);
+
+  // console.log(tabIndex);
+  // if (tabIndex === 1) {
+  //   const group = spots.filter((place) => place.icon === "beach");
+  //   console.log(group);
+  // } else if (tabIndex === 2) {
+  //   const group = spots.filter((place) => place.icon === "food");
+  //   console.log(group);
+  // } else if (tabIndex === 3) {
+  //   const group = spots.filter((place) => place.icon === "shopping");
+  //   console.log(group);
+  // } else if (tabIndex === 4) {
+  //   const group = spots.filter((place) => place.icon === "event");
+  //   console.log(group);
+  // } else if (tabIndex === 5) {
+  //   const group = spots.filter((place) => place.icon === "fitness");
+  //   console.log(group);
+  // } else {
+  //   const group = spots;
+  //   console.log(group);
+  // }
 
   const markers = useMemo(
     () =>

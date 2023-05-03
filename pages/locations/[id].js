@@ -21,7 +21,7 @@ export default function Detail() {
         <div className="w-11/12 sm:w-96 md:w-96 lg:w-96 h-96 lg:mx-3">
           <SpotMap />
         </div>
-        <div className="max-w-xl w-11/12 rounded shadow-lg mx-2 mt-3 py-4 lg:py-2">
+        <div className="max-w-xl w-11/12 rounded shadow-lg mx-2 my-3 py-4 lg:py-2">
           <div className="flex-shrink-0">
             <Image
               src={`/images/${id}.jpg`}
