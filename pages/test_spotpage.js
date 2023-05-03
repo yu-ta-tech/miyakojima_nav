@@ -1,8 +1,4 @@
-import Link from "next/link";
 import Layout from "../components/Layout";
-import Image from "next/image";
-import { places } from "../lib/spotLists";
-import { spots } from "../lib/spots_detailData";
 import AllMap from "../components/maps/AllMap";
 import AllSpots from "../components/categories/allSpots";
 import Categorize from "../components/categories/categorize";
@@ -19,13 +15,13 @@ const Spot = () => {
       <h1 className="text-3xl pt-6 pb-2 mt-2 font-bold">
         見どころ一覧（ジャンル別）
       </h1>
-      <Tabs defaultCSS={false}>
+      <Tabs defaultcss="false">
         <TabList className="w-full pl-4 lg:pl-8 border-b border-gray-400">
           <Tab>全体</Tab>
           <Tab>ビーチ</Tab>
           <Tab>グルメ</Tab>
           <Tab>買い物</Tab>
-          {/* <Tab>イベント</Tab> */}
+          <Tab>イベント</Tab>
           <Tab>フィットネス</Tab>
         </TabList>
 
@@ -41,9 +37,9 @@ const Spot = () => {
         <TabPanel>
           <Categorize category={"shopping"} />
         </TabPanel>
-        {/* <TabPanel>
+        <TabPanel>
           <Categorize category={"event"} />
-        </TabPanel> */}
+        </TabPanel>
         <TabPanel>
           <Categorize category={"fitness"} />
         </TabPanel>

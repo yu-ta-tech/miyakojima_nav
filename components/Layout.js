@@ -13,7 +13,7 @@ export default function Layout({ children, title = "みやこナビ" }) {
           <div className="text-white text-lg mt-3.5 pl-10 sm:pl-20 md:pl-36 lg:text-2xl lg:pl-40 lg:mt-2.5">
             <a href="/">みやこナビ</a>
           </div>
-          <div className="pt-3 md:pl-12 lg:pl-20">
+          <div className="pt-3 pl-5 sm:pl-10 md:pl-12 lg:pl-20">
             <div className="flex sm:ml-16 md:ml-20 lg:ml-44">
               <div className="text-white hover:bg-gray-700 px-3 py-2 rounded">
                 <Link href="/">ホーム</Link>
