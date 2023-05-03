@@ -36,7 +36,7 @@ export default function AllSpots() {
               </div>
               <div>
                 <Link href={`/locations/${places.indexOf(place)}`}>
-                  <button className="bg-blue-500 hover:bg-blue-700 text-white text-sm rounded px-2 h-8">
+                  <button className="transition-all duration-500 bg-blue-500 hover:bg-blue-700 text-white text-sm rounded px-2 h-8">
                     {`${place.name}の詳細`}
                   </button>
                 </Link>
