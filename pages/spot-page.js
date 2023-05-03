@@ -32,42 +32,54 @@ class Spot extends Component {
           <TabList className="w-full pl-4 lg:pl-8 border-b border-gray-300">
             <Tab>
               <span
-                className={this.state.tabIndex === 0 ? borderColor : hoverColor}
+                className={`${
+                  this.state.tabIndex === 0 ? borderColor : hoverColor
+                } transition-all duration-300`}
               >
                 全体
               </span>
             </Tab>
             <Tab>
               <span
-                className={this.state.tabIndex === 1 ? borderColor : hoverColor}
+                className={`${
+                  this.state.tabIndex === 1 ? borderColor : hoverColor
+                } transition-all duration-300`}
               >
                 ビーチ
               </span>
             </Tab>
             <Tab>
               <span
-                className={this.state.tabIndex === 2 ? borderColor : hoverColor}
+                className={`${
+                  this.state.tabIndex === 2 ? borderColor : hoverColor
+                } transition-all duration-300`}
               >
                 グルメ
               </span>
             </Tab>
             <Tab>
               <span
-                className={this.state.tabIndex === 3 ? borderColor : hoverColor}
+                className={`${
+                  this.state.tabIndex === 3 ? borderColor : hoverColor
+                } transition-all duration-300`}
               >
                 買い物
               </span>
             </Tab>
             <Tab>
               <span
-                className={this.state.tabIndex === 4 ? borderColor : hoverColor}
+                className={`${
+                  this.state.tabIndex === 4 ? borderColor : hoverColor
+                } transition-all duration-300`}
               >
                 イベント
               </span>
             </Tab>
             <Tab>
               <span
-                className={this.state.tabIndex === 5 ? borderColor : hoverColor}
+                className={`${
+                  this.state.tabIndex === 5 ? borderColor : hoverColor
+                } transition-all duration-300`}
               >
                 フィットネス
               </span>
