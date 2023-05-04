@@ -37,18 +37,30 @@ export default function Detail() {
             </p>
           </div>
           <div className="px-1 sm:px-6 md:px-6 lg:px-6 break-all">
-            <div className="text-gray-500 pb-2">住所:{spots[id].address}</div>
-            <div className="text-gray-500 pb-2">TEL:{spots[id].tel}</div>
-            <div className="text-gray-500 pb-2">
-              URL:
-              <Link href={spots[id].url}>
-                <a className="underline">{spots[id].url}</a>
-              </Link>
-            </div>
-            <div className="text-gray-500 pb-2">営業時間:{spots[id].open}</div>
-            <div className="text-gray-500 pb-12">
-              休業日:{spots[id].holiday}
-            </div>
+            {spots[id].address && (
+              <div className="text-gray-500 pb-2">住所:{spots[id].address}</div>
+            )}
+            {spots[id].tel && (
+              <div className="text-gray-500 pb-2">TEL:{spots[id].tel}</div>
+            )}
+            {spots[id].url && (
+              <div className="text-gray-500 pb-2">
+                URL:
+                <Link href={spots[id].url}>
+                  <a className="underline">{spots[id].url}</a>
+                </Link>
+              </div>
+            )}
+            {spots[id].open && (
+              <div className="text-gray-500 pb-2">
+                営業時間:{spots[id].open}
+              </div>
+            )}
+            {spots[id].holiday && (
+              <div className="text-gray-500 pb-12">
+                休業日:{spots[id].holiday}
+              </div>
+            )}
           </div>
 
           <span className="p-1 sm:px-6 md:px-6 lg:px-6 text-blue-500 hover:text-blue-700 underline">

@@ -17,12 +17,12 @@ class Spot extends Component {
   render() {
     return (
       <Layout title="見どころ一覧">
-        <h1 className="text-4xl pt-4 underline">全体マップ</h1>
+        <h1 className="text-5xl pt-4 text-black underline">全体マップ</h1>
         <div className="flex justify-center w-full h-72 md:h-96 lg:h-96">
           <AllMap tabIndex={this.state.tabIndex} />
         </div>
-        <h1 className="text-3xl pt-6 pb-2 mt-6 font-bold">
-          見どころ一覧（ジャンル別）
+        <h1 className="text-3xl pt-6 pb-2 mt-10 text-black font-bold">
+          おすすめ観光スポット
         </h1>
         <Tabs
           selectedIndex={this.state.tabIndex}
