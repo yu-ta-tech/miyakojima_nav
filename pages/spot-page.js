@@ -63,25 +63,7 @@ class Spot extends Component {
                   this.state.tabIndex === 3 ? borderColor : hoverColor
                 } transition-all duration-300`}
               >
-                買い物
-              </span>
-            </Tab>
-            <Tab>
-              <span
-                className={`${
-                  this.state.tabIndex === 4 ? borderColor : hoverColor
-                } transition-all duration-300`}
-              >
-                イベント
-              </span>
-            </Tab>
-            <Tab>
-              <span
-                className={`${
-                  this.state.tabIndex === 5 ? borderColor : hoverColor
-                } transition-all duration-300`}
-              >
-                フィットネス
+                ショッピング
               </span>
             </Tab>
           </TabList>
@@ -97,12 +79,6 @@ class Spot extends Component {
           </TabPanel>
           <TabPanel>
             <Categorize category={"shopping"} />
-          </TabPanel>
-          <TabPanel>
-            <Categorize category={"event"} />
-          </TabPanel>
-          <TabPanel>
-            <Categorize category={"fitness"} />
           </TabPanel>
         </Tabs>
       </Layout>
