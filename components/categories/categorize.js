@@ -38,7 +38,10 @@ export default function Categorize({ category }) {
                   const items = [];
                   for (let i = 0; i < categorizedPlace.features.length; i++) {
                     items.push(
-                      <li className="text-pink-400 border-pink-400 text-xs font-medium mr-2 px-2 py-0.5 border rounded">
+                      <li
+                        key={categorizedPlace.features[i]}
+                        className="text-pink-400 border-pink-400 text-xs font-medium mr-2 px-2 py-0.5 border rounded"
+                      >
                         {categorizedPlace.features[i]}
                       </li>
                     );

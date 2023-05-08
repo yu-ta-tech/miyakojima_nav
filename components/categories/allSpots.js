@@ -34,7 +34,10 @@ export default function AllSpots() {
                   const items = [];
                   for (let i = 0; i < place.features.length; i++) {
                     items.push(
-                      <li className="text-pink-400 border-pink-400 text-xs font-medium mr-2 px-2 py-0.5 border rounded">
+                      <li
+                        key={place.features[i]}
+                        className="text-pink-400 border-pink-400 text-xs font-medium mr-2 px-2 py-0.5 border rounded"
+                      >
                         {place.features[i]}
                       </li>
                     );
