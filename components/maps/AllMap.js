@@ -70,7 +70,7 @@ export default function AllMap({ tabIndex }) {
       initialViewState={{
         longitude: "125.30671897208508",
         latitude: "24.7885036757072867673",
-        zoom: 10,
+        zoom: 11,
       }}
       style={{ top: "20px", width: "85%", height: "100%" }}
       // スタイル仕様 https://docs.mapbox.com/mapbox-gl-js/style-spec/
