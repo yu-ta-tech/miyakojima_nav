@@ -8,8 +8,8 @@ export default function Layout({ children, title = "みやこナビ" }) {
       <Head>
         <title>{title}</title>
       </Head>
-      <header className="sticky top-0 z-10">
-        <nav className="bg-gray-900 h-14 w-screen grid grid-cols-2">
+      <header className="sticky top-0 z-30">
+        <nav className="bg-gray-800 h-14 w-screen grid grid-cols-2">
           <div className="text-white text-lg mt-3.5 pl-10 sm:pl-20 md:pl-36 lg:text-2xl lg:pl-40 lg:mt-2.5">
             <a href="/">みやこナビ</a>
           </div>
