@@ -24,12 +24,7 @@ export default function AllSpots() {
               <div className="text-gray-700 font-bold text-xl pb-1">
                 {place.name}
               </div>
-              <div className="px-1">
-                <p className="text-gray-700 text-base">
-                  {spots[place.id].description}
-                </p>
-              </div>
-              <div className="px-1 p-4">
+              <div className="pl-0.5 py-2">
                 {(() => {
                   const items = [];
                   for (let i = 0; i < place.features.length; i++) {
@@ -44,6 +39,11 @@ export default function AllSpots() {
                   }
                   return <ul className="flex">{items}</ul>;
                 })()}
+              </div>
+              <div className="pb-4">
+                <p className="text-gray-700 text-base">
+                  {spots[place.id].description}
+                </p>
               </div>
               <div>
                 <Link href={`/locations/${places.indexOf(place)}`}>

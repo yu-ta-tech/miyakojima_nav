@@ -32,14 +32,50 @@ export default function Detail() {
           </div>
           <div className="px-1 py-5 sm:px-6 md:px-6 lg:px-6 text-gray-700">
             <div className="font-bold text-xl pb-3">{spots[id].name}</div>
-            <p className="text-gray-700 text-sm py-2">
+            <div className="pl-0.5 py-1">
+              {(() => {
+                const items = [];
+                for (let i = 0; i < places[id].features.length; i++) {
+                  items.push(
+                    <li
+                      key={places[id].features[i]}
+                      className="text-pink-400 border-pink-400 text-xs font-medium mr-2 px-2 py-0.5 border rounded"
+                    >
+                      {places[id].features[i]}
+                    </li>
+                  );
+                }
+                return <ul className="flex">{items}</ul>;
+              })()}
+            </div>
+            <p className="text-gray-700 text-sm py-2 pl-0.5">
               {spots[id].description}
             </p>
           </div>
           <div className="px-1 sm:px-6 md:px-6 lg:px-6 break-all">
+            {spots[id].access && (
+              <div className="text-gray-500 pb-2">
+                アクセス: {spots[id].access}
+              </div>
+            )}
+            {spots[id].address && (
+              <div className="text-gray-500 pb-2">
+                住所: {spots[id].address}
+              </div>
+            )}
             {spots[id].parking && (
               <div className="text-gray-500 pb-2">
                 駐車場: {spots[id].parking}
+              </div>
+            )}
+            {spots[id].open && (
+              <div className="text-gray-500 pb-2">
+                営業時間: {spots[id].open}
+              </div>
+            )}
+            {spots[id].holiday && (
+              <div className="text-gray-500 pb-2">
+                休業日: {spots[id].holiday}
               </div>
             )}
             {spots[id].facility && (
@@ -58,7 +94,7 @@ export default function Detail() {
               </div>
             )}
             {spots[id].expectation && (
-              <div className="text-gray-500 pb-3">
+              <div className="text-gray-500 pb-8">
                 何が見れるのか: {spots[id].expectation}
               </div>
             )}
@@ -71,16 +107,6 @@ export default function Detail() {
                 <Link href={spots[id].url}>
                   <a className="underline">{spots[id].url}</a>
                 </Link>
-              </div>
-            )}
-            {spots[id].open && (
-              <div className="text-gray-500 pb-2">
-                営業時間: {spots[id].open}
-              </div>
-            )}
-            {spots[id].holiday && (
-              <div className="text-gray-500 pb-2">
-                休業日: {spots[id].holiday}
               </div>
             )}
             {(() => {
@@ -98,21 +124,31 @@ export default function Detail() {
                     );
                   }
                   return (
-                    <ul className="flex pb-2 text-gray-500">
+                    <ul className="flex pb-8 text-gray-500">
                       サービス: {items}
                     </ul>
                   );
                 }
               }
             })()}
-            {spots[id].access && (
-              <div className="text-gray-500 pb-2">
-                アクセス: {spots[id].access}
+            {spots[id].souvenir && (
+              <div className="text-gray-500 pb-8">
+                お土産コーナー: {spots[id].souvenir}
               </div>
             )}
-            {spots[id].address && (
+            {spots[id].enjoy && (
+              <div className="text-gray-500 pb-2">
+                楽しみ方: {spots[id].enjoy}
+              </div>
+            )}
+            {spots[id].timeZone && (
+              <div className="text-gray-500 pb-2">
+                おすすめの時間帯: {spots[id].timeZone}
+              </div>
+            )}
+            {spots[id].trivia && (
               <div className="text-gray-500 pb-8">
-                住所: {spots[id].address}
+                豆知識: {spots[id].trivia}
               </div>
             )}
           </div>
