@@ -20,19 +20,27 @@ export default function AllSpots() {
                 alt={place.name}
               />
             </div>
-            <div className="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
+            <div className="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 leading-normal">
               <div className="text-gray-700 font-bold text-xl pb-1">
                 {place.name}
               </div>
-              <div className="px-1 pb-3">
+              <div className="px-1">
                 <p className="text-gray-700 text-base">
                   {spots[place.id].description}
                 </p>
               </div>
-              <div className="flex items-center px-1 pb-4">
-                <div className="text-sm">
-                  <p className="text-gray-500">{place.address}</p>
-                </div>
+              <div className="px-1 p-4">
+                {(() => {
+                  const items = [];
+                  for (let i = 0; i < place.features.length; i++) {
+                    items.push(
+                      <li className="text-pink-400 border-pink-400 text-xs font-medium mr-2 px-2 py-0.5 border rounded">
+                        {place.features[i]}
+                      </li>
+                    );
+                  }
+                  return <ul className="flex">{items}</ul>;
+                })()}
               </div>
               <div>
                 <Link href={`/locations/${places.indexOf(place)}`}>

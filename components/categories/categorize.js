@@ -28,15 +28,23 @@ export default function Categorize({ category }) {
               <div className="text-gray-700 font-bold text-xl pb-1">
                 {categorizedPlace.name}
               </div>
-              <div className="px-1 pb-3">
+              <div className="px-1">
                 <p className="text-gray-700 text-base">
                   {spots[categorizedPlace.id].description}
                 </p>
               </div>
-              <div className="flex items-center px-1 pb-4">
-                <div className="text-sm">
-                  <p className="text-gray-500">{categorizedPlace.address}</p>
-                </div>
+              <div className="px-1 p-4">
+                {(() => {
+                  const items = [];
+                  for (let i = 0; i < categorizedPlace.features.length; i++) {
+                    items.push(
+                      <li className="text-pink-400 border-pink-400 text-xs font-medium mr-2 px-2 py-0.5 border rounded">
+                        {categorizedPlace.features[i]}
+                      </li>
+                    );
+                  }
+                  return <ul className="flex">{items}</ul>;
+                })()}
               </div>
               <div>
                 <Link href={`/locations/${places.indexOf(categorizedPlace)}`}>
