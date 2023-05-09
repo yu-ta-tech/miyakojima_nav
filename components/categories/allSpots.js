@@ -6,6 +6,11 @@ import { spots } from "../../lib/spots_detailData";
 export default function AllSpots() {
   return (
     <div className="text-xl mx-4">
+      <div className="text-black text-sm pt-6 pl-4 pb-2">
+        表示件数：{" "}
+        <span className="text-2xl text-black font-bold">{places.length}</span>{" "}
+        件
+      </div>
       {places &&
         places.map((place) => (
           <div
