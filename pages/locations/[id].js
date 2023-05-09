@@ -30,8 +30,10 @@ export default function Detail() {
               alt={places[id].name}
             />
           </div>
-          <div className="px-1 py-5 sm:px-6 md:px-6 lg:px-6 text-gray-700">
-            <div className="font-bold text-xl pb-3">{spots[id].name}</div>
+          <div className="px-2 py-5 sm:px-6 md:px-6 lg:px-6 text-gray-700">
+            <div className="font-bold text-xl lg:text-2xl pb-3">
+              {spots[id].name}
+            </div>
             <div className="pl-0.5 py-1">
               {(() => {
                 const items = [];
