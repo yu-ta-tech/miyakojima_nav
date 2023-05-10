@@ -126,13 +126,24 @@ export default function Detail() {
                     );
                   }
                   return (
-                    <ul className="flex pb-8 text-gray-500">
+                    <ul className="flex pb-2 text-gray-500">
                       サービス: {items}
                     </ul>
                   );
                 }
               }
             })()}
+            {spots[id].priceRange && (
+              <div className="text-gray-500 pb-2">
+                価格帯: {spots[id].priceRange}
+              </div>
+            )}
+            {spots[id].specialty && (
+              <div className="text-gray-500 pb-8">
+                一押しメニュー: {spots[id].specialty}
+              </div>
+            )}
+
             {spots[id].souvenir && (
               <div className="text-gray-500 pb-8">
                 お土産コーナー: {spots[id].souvenir}
