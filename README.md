@@ -9,18 +9,28 @@
 
 # URL
 
+https://miyakojima-nav.vercel.app/
+
 # 開発環境
 
 macOS Ventura 13.3.1
 
-# 使用技術
+# 使用技術（カッコ内はバージョン）
 
 - Next.js(12.3.2)
 - TailwindCSS(3.3.1)
-- mapbox
--
+- mapbox(2.14.1)
+- Vercel
+
+### そのほかの使用技術
+
+- eslint
+- prettier
 
 # 機能、非機能一覧
+
+- マップのマーカーをクリックでポップアップ表示。
+- レスポンシブデザイン
 
 # 工夫した部分
 
