@@ -13,7 +13,7 @@
 
 macOS Ventura 13.3.1
 
-#　使用技術
+# 使用技術
 
 - Next.js(12.3.2)
 - TailwindCSS(3.3.1)
