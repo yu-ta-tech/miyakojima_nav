@@ -41,7 +41,6 @@ export default function SpotMap() {
         zoom: 11,
       }}
       style={{ top: "20px", width: "100%", height: "100%" }}
-      // スタイル仕様 https://docs.mapbox.com/mapbox-gl-js/style-spec/
       mapStyle={"mapbox://styles/mapbox/outdoors-v12"}
       mapboxAccessToken={process.env.NEXT_PUBLIC_MAP_BOX_TOKEN}
     >

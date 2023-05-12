@@ -19,27 +19,6 @@ import "mapbox-gl/dist/mapbox-gl.css";
 export default function AllMap({ tabIndex }) {
   const [popupInfo, setPopupInfo] = useState(null);
 
-  // console.log(tabIndex);
-  // if (tabIndex === 1) {
-  //   const group = spots.filter((place) => place.icon === "beach");
-  //   console.log(group);
-  // } else if (tabIndex === 2) {
-  //   const group = spots.filter((place) => place.icon === "food");
-  //   console.log(group);
-  // } else if (tabIndex === 3) {
-  //   const group = spots.filter((place) => place.icon === "shopping");
-  //   console.log(group);
-  // } else if (tabIndex === 4) {
-  //   const group = spots.filter((place) => place.icon === "event");
-  //   console.log(group);
-  // } else if (tabIndex === 5) {
-  //   const group = spots.filter((place) => place.icon === "fitness");
-  //   console.log(group);
-  // } else {
-  //   const group = spots;
-  //   console.log(group);
-  // }
-
   const markers = useMemo(
     () =>
       spots.map((spot, index) => (
@@ -73,7 +52,6 @@ export default function AllMap({ tabIndex }) {
         zoom: 10,
       }}
       style={{ top: "20px", width: "85%", height: "100%" }}
-      // スタイル仕様 https://docs.mapbox.com/mapbox-gl-js/style-spec/
       mapStyle={"mapbox://styles/mapbox/light-v10"}
       mapboxAccessToken={process.env.NEXT_PUBLIC_MAP_BOX_TOKEN}
     >
