@@ -47,14 +47,14 @@ export default function AllSpots() {
                   return <ul className="flex">{items}</ul>;
                 })()}
               </div>
-              <div className="pb-4">
+              <div className="pb-4 hidden sm:block md:block lg:block">
                 <p className="text-gray-700 text-base">
                   {spots[place.id].description}
                 </p>
               </div>
               <div>
                 <Link href={`/locations/${places.indexOf(place)}`}>
-                  <button className="transition-all duration-500 bg-blue-500 hover:bg-blue-700 text-white text-sm rounded px-2 h-8">
+                  <button className="transition-all duration-300 bg-gray-400 hover:bg-gray-600 text-white text-sm rounded px-2 h-8 mt-2 sm:mt-0 md:mt-0 lg:mt-0">
                     {`${place.name}の詳細`}
                   </button>
                 </Link>
