@@ -28,21 +28,21 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="fixed top-0 left-0 w-full h-screen bg-black">
-        {/* <video
-          className="w-full h-screen opacity-80"
+      <div className="fixed bg-black">
+        <video
+          className="object-fill w-screen h-screen opacity-80"
           autoPlay
           muted
           loop
           playsInline
           src="yonaha.MOV"
-        /> */}
-        <Image
+        />
+        {/* <Image
           className="opacity-60"
           src={"/backImage_sunset.jpg"}
           layout="fill"
           objectFit="cover"
-        />
+        /> */}
       </div>
     </Layout>
   );
