@@ -22,7 +22,7 @@ export default function Home() {
             </p>
           </div>
           <div className="flex justify-center mb-20">
-            <span className="transition-all duration-500 px-4 py-2 m-5 border border-black shadow-xl ring-yellow-300 text-black bg-gray-50 hover:bg-black hover:text-gray-50 hover:ring-4 rounded">
+            <span className="transition-all duration-500 px-4 py-2 m-5 border border-black shadow-xl ring-white text-black bg-gray-50 hover:bg-gray-600 hover:text-gray-50 hover:ring-4 rounded">
               <Link href="/spot-page">スポット一覧へ</Link>
             </span>
           </div>
