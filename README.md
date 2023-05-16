@@ -29,6 +29,10 @@ macOS Ventura 13.3.1
 - eslint
 - prettier
 
+# Vercel 構成図
+
+<img width="500" alt="Vercel構成図" src="./public/readme/vercel.diagram.jpg">
+
 # 機能、非機能一覧
 
 - mapbox でマップ表示
