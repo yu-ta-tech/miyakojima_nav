@@ -2,7 +2,7 @@
 
 未経験からエンジニアに転職するため、ポートフォリオを作成しました。<br />
 宮古島の観光スポットを、それぞれのジャンルごとに見つけることができます。
-<img width="1000" alt="ホーム画面" src="./public/readme/home.jpg">
+<img width="1000" alt="ホーム画面GIF" src="./public/readme/LP.gif">
 <img width="1000" alt="画面遷移GIF" src="./public/readme/detail.gif">
 
 # 制作期間
