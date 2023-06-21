@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { places } from "../../lib/spotLists";
-import { spots } from "../../lib/spots_detailData";
+import { spots } from "../../lib/spots_detailDat";
 
 export default function AllSpots() {
   return (

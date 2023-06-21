@@ -14,7 +14,7 @@ import Map, {
   Popup,
 } from "react-map-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
-import { spots } from "../../lib/spots_detailData";
+import { spots } from "../../lib/spots_detailDat";
 
 export default function SpotMap() {
   const [showPopup, setShowPopup] = useState(false);
