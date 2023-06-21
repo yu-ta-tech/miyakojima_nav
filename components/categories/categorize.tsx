@@ -1,9 +1,14 @@
 import Link from "next/link";
 import Image from "next/image";
 import { places } from "../../lib/spotLists";
-import { spots } from "../../lib/spots_detailDat";
+import { spots } from "../../lib/spots_detailData";
 
-export default function Categorize({ category }) {
+// 要チェック!!
+interface Prop {
+  category: any;
+}
+
+export default function Categorize({ category }: Prop) {
   const categorizedPlaces = places.filter(
     (place) => place.category === category
   );

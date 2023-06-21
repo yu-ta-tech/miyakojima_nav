@@ -8,7 +8,8 @@ import { places } from "../../lib/spotLists";
 
 export default function Detail() {
   const router = useRouter();
-  const { id } = router.query;
+  //!見直し
+  const { id }: any = router.query;
 
   //router.queryが初回レンダリング時にundefinedになるため
   if (!router.isReady) {
@@ -106,13 +107,13 @@ export default function Detail() {
             {spots[id].url && (
               <div className="text-gray-500 pb-2">
                 URL:
-                <Link href={spots[id].url}>
+                <Link href={spots[id].url as string}>
                   <a className="underline">{spots[id].url}</a>
                 </Link>
               </div>
             )}
             {(() => {
-              if (spots[id].icon === "food") {
+              if ((spots[id].icon as string) === "food") {
                 {
                   const items = [];
                   for (let i = 0; i < spots[id].services.length; i++) {

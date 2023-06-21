@@ -1,3 +1,5 @@
+//オブジェクトの型を定義→[id].tsxのエラー解消？
+
 export const spots = [
   {
     name: "与那覇前浜ビーチ",

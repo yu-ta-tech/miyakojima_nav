@@ -1,7 +1,13 @@
 import "../styles/globals.css";
 import "tailwindcss/tailwind.css";
 
-function MyApp({ Component, pageProps }) {
+// 要チェック!!
+interface Prop {
+  Component: any;
+  pageProps: any;
+}
+
+function MyApp({ Component, pageProps }: Prop) {
   return <Component {...pageProps} />;
 }
 
