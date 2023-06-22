@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import Layout from "../components/Layout";
 
@@ -37,12 +36,6 @@ export default function Home() {
           playsInline
           src="yonaha.MOV"
         />
-        {/* <Image
-          className="opacity-60"
-          src={"/backImage_sunset.jpg"}
-          layout="fill"
-          objectFit="cover"
-        /> */}
       </div>
     </Layout>
   );

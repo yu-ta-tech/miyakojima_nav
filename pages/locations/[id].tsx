@@ -113,16 +113,16 @@ export default function Detail() {
               </div>
             )}
             {(() => {
-              if ((spots[id].icon as string) === "food") {
+              if (spots[id].services && (spots[id].icon as string) === "food") {
                 {
                   const items = [];
-                  for (let i = 0; i < spots[id].services.length; i++) {
+                  for (let i = 0; i < spots[id].services!.length; i++) {
                     items.push(
                       <li
-                        key={spots[id].services[i]}
+                        key={spots[id].services![i]}
                         className="text-yellow-400 border-yellow-400 text-xs font-medium mr-2 px-2 py-0.5 border rounded-lg"
                       >
-                        {spots[id].services[i]}
+                        {spots[id].services![i]}
                       </li>
                     );
                   }
