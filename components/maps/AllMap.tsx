@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { useEffect, useMemo, useState } from "react";
+import { SetStateAction, useEffect, useMemo, useState } from "react";
 import { spots } from "../../lib/spots_detailData";
 import Map, {
   Layer,
@@ -16,16 +16,16 @@ import Map, {
 } from "react-map-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 
-export default function AllMap({ tabIndex }) {
+export default function AllMap({ tabIndex }: any) {
   const [popupInfo, setPopupInfo] = useState(null);
 
   const markers = useMemo(
     () =>
-      spots.map((spot, index) => (
+      spots.map((spot: SetStateAction<any>, index) => (
         <Marker
           key={index}
-          longitude={spot.longitude}
-          latitude={spot.latitude}
+          longitude={Number(spot.longitude)}
+          latitude={Number(spot.latitude)}
           anchor="bottom"
           onClick={(e) => {
             e.originalEvent.stopPropagation();
@@ -47,8 +47,8 @@ export default function AllMap({ tabIndex }) {
     <Map
       id="ClusterMap"
       initialViewState={{
-        longitude: "125.30671897208508",
-        latitude: "24.7885036757072867673",
+        longitude: Number("125.30671897208508"),
+        latitude: Number("24.7885036757072867673"),
         zoom: 10,
       }}
       style={{ top: "20px", width: "85%", height: "100%" }}

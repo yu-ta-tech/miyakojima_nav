@@ -9,9 +9,10 @@ import "react-tabs/style/react-tabs.css";
 const borderColor = "border-b-2 border-blue-500";
 const hoverColor = "hover:text-blue-400";
 
-class Spot extends Component {
-  constructor() {
-    super();
+class Spot extends Component<{}, { tabIndex: any }> {
+  //見直し必須！！　↑もよくわからない。
+  constructor(props: any, context: any) {
+    super(props);
     this.state = { tabIndex: 0 };
   }
   render() {
@@ -27,7 +28,7 @@ class Spot extends Component {
         <Tabs
           selectedIndex={this.state.tabIndex}
           onSelect={(tabIndex) => this.setState({ tabIndex })}
-          defaultcss="false"
+          // defaultcss="false"
         >
           <TabList className="w-full pl-4 lg:pl-8 border-b border-gray-300">
             <Tab>

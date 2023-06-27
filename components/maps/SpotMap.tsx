@@ -21,13 +21,14 @@ export default function SpotMap() {
 
   const router = useRouter();
   const { id } = router.query;
+  const idIndex = Number(id);
 
   //router.queryが初回レンダリング時にundefinedになるため
   if (!router.isReady) {
     return null;
   }
 
-  const onClick = (e) => {
+  const onClick = (e: any) => {
     e.originalEvent.stopPropagation();
     showPopup ? setShowPopup(false) : setShowPopup(true);
   };
@@ -36,8 +37,8 @@ export default function SpotMap() {
     <Map
       id="spotMap"
       initialViewState={{
-        longitude: spots[id].longitude,
-        latitude: spots[id].latitude,
+        longitude: Number(spots[idIndex].longitude),
+        latitude: Number(spots[idIndex].latitude),
         zoom: 11,
       }}
       style={{ top: "20px", width: "100%", height: "100%" }}
@@ -45,20 +46,20 @@ export default function SpotMap() {
       mapboxAccessToken={process.env.NEXT_PUBLIC_MAP_BOX_TOKEN}
     >
       <Marker
-        longitude={spots[id].longitude}
-        latitude={spots[id].latitude}
+        longitude={Number(spots[idIndex].longitude)}
+        latitude={Number(spots[idIndex].latitude)}
         anchor="bottom"
         onClick={onClick}
       />
       {showPopup && (
         <Popup
-          longitude={spots[id].longitude}
-          latitude={spots[id].latitude}
+          longitude={Number(spots[idIndex].longitude)}
+          latitude={Number(spots[idIndex].latitude)}
           offset={40}
           anchor="bottom"
           onClose={() => setShowPopup(false)}
         >
-          {spots[id].name}
+          {spots[idIndex].name}
         </Popup>
       )}
       <NavigationControl />

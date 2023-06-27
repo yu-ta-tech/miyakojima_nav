@@ -2,7 +2,12 @@ import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 
-export default function Layout({ children, title = "みやこナビ" }) {
+type Prop = {
+  children: any;
+  title: string;
+};
+
+export default function Layout({ children, title = "みやこナビ" }: Prop) {
   return (
     <div className="flex flex-col justify-center items-center text-gray-600 text-sm font-mono min-h-screen">
       <Head>
