@@ -17,7 +17,8 @@ import Map, {
 import "mapbox-gl/dist/mapbox-gl.css";
 
 export default function AllMap({ tabIndex }: any) {
-  const [popupInfo, setPopupInfo] = useState(null);
+  type PopupType = any; //見直し
+  const [popupInfo, setPopupInfo] = useState<PopupType>(null);
 
   const markers = useMemo(
     () =>
