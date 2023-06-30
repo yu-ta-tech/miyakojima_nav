@@ -20,6 +20,7 @@ macOS Ventura 13.3.1
 # 使用技術（カッコ内はバージョン）
 
 - Next.js(12.3.2)
+- TypeScript(5.1.3)
 - TailwindCSS(3.3.1)
 - mapbox(2.14.1)
 - Vercel
@@ -77,7 +78,6 @@ macOS Ventura 13.3.1
 # 改善点
 
 - コード全体のリファクタリング
-- TypeScript への移行
 - DB 導入（以下は導入後に追加検討している機能）
   - 認証認可（ユーザ登録、ログイン、CRUD、レビュー）
   - 検索、並び替え機能
