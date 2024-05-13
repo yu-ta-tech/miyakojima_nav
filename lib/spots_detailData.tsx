@@ -1,6 +1,33 @@
 //オブジェクトの型を定義→[id].tsxのエラー解消？
 
-export const spots = [
+export type Spot = {
+  name: string;
+  icon: string;
+  description: string;
+  access?: string;
+  address: string;
+  otherInformations: string;
+  parking?: string;
+  facility?: string;
+  numberOfPeople?: string;
+  dangerous?: string;
+  expectation?: string;
+  longitude: string;
+  latitude: string;
+  open?: string;
+  holiday?: string;
+  tel?: string;
+  url?: string;
+  souvenir?: string;
+  enjoy?: string;
+  timeZone?: string;
+  trivia?: string;
+  services?: string[];
+  priceRange?: string;
+  specialty?: string;
+};
+
+export const spots: Array<Spot> = [
   {
     name: "与那覇前浜ビーチ",
     icon: "beach",

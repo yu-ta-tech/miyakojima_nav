@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { SetStateAction, useEffect, useMemo, useState } from "react";
-import { spots } from "../../lib/spots_detailData";
+import { spots, type Spot } from "../../lib/spots_detailData";
 import Map, {
   Layer,
   LayerProps,
@@ -22,7 +22,7 @@ export default function AllMap({ tabIndex }: any) {
 
   const markers = useMemo(
     () =>
-      spots.map((spot: SetStateAction<any>, index) => (
+      spots.map((spot: Spot, index: number) => (
         <Marker
           key={index}
           longitude={Number(spot.longitude)}
