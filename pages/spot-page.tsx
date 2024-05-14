@@ -20,7 +20,7 @@ class Spot extends Component<{}, { tabIndex: any }> {
       <Layout title="観光スポット一覧｜みやこナビ">
         <h1 className="text-5xl pt-4 text-black underline">全体マップ</h1>
         <div className="flex justify-center w-full h-72 md:h-96 lg:h-96">
-          <AllMap tabIndex={this.state.tabIndex} />
+          <AllMap />
         </div>
         <h1 className="text-3xl pt-6 pb-2 mt-10 text-black font-bold">
           おすすめ観光スポット

@@ -16,7 +16,7 @@ import Map, {
 } from "react-map-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 
-export default function AllMap({ tabIndex }: any) {
+export default function AllMap() {
   type PopupType = any; //見直し
   const [popupInfo, setPopupInfo] = useState<PopupType>(null);
 
