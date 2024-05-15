@@ -9,10 +9,10 @@ import { places } from "../../lib/spotLists";
 export default function Detail() {
   const router = useRouter();
   //!見直し
-  const { id }: any = router.query;
+  const { id } = router.query as { id?: number };
 
-  //router.queryが初回レンダリング時にundefinedになるため
-  if (!router.isReady) {
+  // router.queryが初回レンダリング時にundefinedになるため
+  if (!router.isReady || !id) {
     return null;
   }
 
