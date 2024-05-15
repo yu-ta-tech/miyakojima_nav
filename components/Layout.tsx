@@ -1,10 +1,11 @@
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
+import { ReactNode } from "react";
 
 type Prop = {
-  children: any;
-  title: string;
+  children: ReactNode;
+  title?: string;
 };
 
 export default function Layout({ children, title = "みやこナビ" }: Prop) {
