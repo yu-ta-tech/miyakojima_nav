@@ -12,6 +12,7 @@ import Map, {
   useMap,
   FullscreenControl,
   Popup,
+  MapboxEvent,
 } from "react-map-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 import { spots } from "../../lib/spots_detailData";
@@ -28,7 +29,7 @@ export default function SpotMap() {
     return null;
   }
 
-  const onClick = (e: any) => {
+  const onClick = (e: MapboxEvent<MouseEvent>) => {
     e.originalEvent.stopPropagation();
     showPopup ? setShowPopup(false) : setShowPopup(true);
   };
