@@ -17,8 +17,7 @@ import Map, {
 import "mapbox-gl/dist/mapbox-gl.css";
 
 export default function AllMap() {
-  type PopupType = any; //見直し
-  const [popupInfo, setPopupInfo] = useState<PopupType>(null);
+  const [popupInfo, setPopupInfo] = useState<Spot | null>(null);
 
   const markers = useMemo(
     () =>
@@ -60,8 +59,8 @@ export default function AllMap() {
 
       {popupInfo && (
         <Popup
-          longitude={popupInfo.longitude}
-          latitude={popupInfo.latitude}
+          longitude={Number(popupInfo.longitude)}
+          latitude={Number(popupInfo.latitude)}
           anchor="top"
           offset={-20}
           onClose={() => setPopupInfo(null)}
@@ -76,6 +75,7 @@ export default function AllMap() {
             width={160}
             height={120}
             src={`/images/${spots.indexOf(popupInfo)}.jpg`}
+            alt={`${popupInfo.name}`}
           />
         </Popup>
       )}
