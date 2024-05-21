@@ -1,5 +1,3 @@
-//オブジェクトの型を定義→[id].tsxのエラー解消？
-
 export type Spot = {
   name: string;
   icon: string;

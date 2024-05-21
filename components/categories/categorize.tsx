@@ -5,7 +5,7 @@ import { spots } from "../../lib/spots_detailData";
 
 // 要チェック!!
 interface Prop {
-  category: any;
+  category: "beach" | "food" | "shopping" | "sightseeing" | "all";
 }
 
 export default function Categorize({ category }: Prop) {

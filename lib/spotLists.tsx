@@ -1,4 +1,11 @@
-export const places = [
+export type Place = {
+  id: number;
+  category: "beach" | "food" | "shopping" | "sightseeing";
+  name: string;
+  features: string[];
+};
+
+export const places: Array<Place> = [
   {
     id: 0,
     category: "beach",
