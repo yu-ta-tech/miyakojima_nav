@@ -1,13 +1,8 @@
 import "../styles/globals.css";
 import "tailwindcss/tailwind.css";
+import type { AppProps } from "next/app";
 
-// 要チェック!!
-interface Prop {
-  Component: any;
-  pageProps: any;
-}
-
-function MyApp({ Component, pageProps }: Prop) {
+function MyApp({ Component, pageProps }: AppProps) {
   return <Component {...pageProps} />;
 }
 
